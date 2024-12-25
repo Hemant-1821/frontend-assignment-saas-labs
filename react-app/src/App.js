@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import Table from "./Table";
-import Navigation from "./Navigation";
 
 const ENTRIES_PER_PAGE = 5;
 
@@ -38,7 +37,7 @@ function App() {
         Math.ceil(projectsData.length / ENTRIES_PER_PAGE),
       ];
     }
-    return [undefined, () => {}];
+    return [undefined, undefined];
   }, [currPage, projectsData]);
 
   const changePage = (page) => {
@@ -48,14 +47,12 @@ function App() {
   return (
     <div className="App">
       {entriesForDisplay && (
-        <>
-          <Table
-            entriesForDisplay={entriesForDisplay}
-            currPage={currPage}
-            changePage={changePage}
-            totalPages={totalPages}
-          />
-        </>
+        <Table
+          entriesForDisplay={entriesForDisplay}
+          currPage={currPage}
+          changePage={changePage}
+          totalPages={totalPages}
+        />
       )}
     </div>
   );

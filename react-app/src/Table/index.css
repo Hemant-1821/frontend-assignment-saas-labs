@@ -35,3 +35,52 @@ tr {
 tr:hover {
   background-color: #fafafc;
 }
+
+/* Navigation css */
+.nav-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-number {
+}
+
+.btn-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.major-button {
+  background-color: white;
+  color: #4db5cc;
+  padding: 6px 7px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border: 2px solid #4db5cc;
+}
+
+.major-button:hover {
+  background-color: #4db5cc;
+  color: white;
+}
+
+.major-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.minor-btns {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.minor-btns:hover {
+  color: #4db5cc;
+}
